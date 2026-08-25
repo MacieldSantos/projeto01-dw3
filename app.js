@@ -81,10 +81,10 @@ var callback = function(request, response) {
     // Rota do projeto
     else if (parts.path == "/projeto") {
 
-        response.writeHead(200, {"Content-type": "text/html"});
-        readFile(response, "projeto/projeto.html");
-        //response.writeHead(200, {"Content-type": "application/pdf"});
-        //readFile(response, "projeto/documentacao.pdf");
+        //response.writeHead(200, {"Content-type": "text/html"});
+        //readFile(response, "projeto/projeto.html");
+        response.writeHead(200, {"Content-type": "application/pdf"});
+        readFile(response, "projeto/documentacao.pdf");
     }
     // Rota do CSS
     else if (parts.path == "/css/estilo.css") {
