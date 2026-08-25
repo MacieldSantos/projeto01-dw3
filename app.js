@@ -83,7 +83,7 @@ var callback = function(request, response) {
     else{
         
         response.writeHead(404, {"Content-type": "text/html"});
-        response.end("Erro 404 - Página não encontrada.");
+        readFile(response, "erro404.html");
     }
 };
 
