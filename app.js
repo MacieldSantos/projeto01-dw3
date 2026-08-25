@@ -78,6 +78,19 @@ var callback = function(request, response) {
         response.writeHead(200, {"Content-type": "application/pdf"});
         readFile(response, "integrante2/curriculo_integrante2.pdf")
     }
+    // Rota do projeto
+    else if (parts.path == "/projeto") {
+
+        response.writeHead(200, {"Content-type": "text/html"});
+        readFile(response, "projeto/projeto.html");
+        //response.writeHead(200, {"Content-type": "application/pdf"});
+        //readFile(response, "projeto/documentacao.pdf");
+    }
+    // Rota do CSS
+    else if (parts.path == "/css/estilo.css") {
+        response.writeHead(200, {"Content-type": "text/css"});
+        readFile(response, "css/estilo.css");
+    }
 
     // Rota não encontrada
     else{
