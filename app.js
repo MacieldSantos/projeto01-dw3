@@ -42,14 +42,37 @@ var callback = function(request, response) {
         response.writeHead(200, {"Content-type": "text/html"});
         readFile(response, "index.html");
     }
-    
+    // Rota do integrante Maciel
+    else if (parts.path == "/maciel") {
+
+        response.writeHead(200, {"Content-type": "text/html"});
+        readFile(response, "maciel/index.html");
+    }
+    // Rota da página sobre do Maciel
+    else if (parts.path == "/maciel/sobre") {
+
+        response.writeHead(200, {"Content-type": "text/html"});
+        readFile(response, "maciel/sobre.html");
+    }
     // Rota do currículo do Maciel
     else if (parts.path == "/maciel/curriculo") {
 
         response.writeHead(200, {"Content-type": "application/pdf"});
         readFile(response, "maciel/curriculo_Maciel.pdf")
     }
+    // Rota do integrante 2
+    else if (parts.path == "/integrante2") {
 
+        response.writeHead(200, {"Content-type": "text/html"});
+        readFile(response, "integrante2/index.html");
+    }
+    // Rota da página sobre do integrante 2
+    else if (parts.path == "/integrante2/sobre") {
+
+        response.writeHead(200, {"Content-type": "text/html"});
+        readFile(response, "integrante2/sobre.html");
+    }
+    // Rota do currículo do integrante 2
     else if (parts.path == "/integrante2/curriculo") {
 
         response.writeHead(200, {"Content-type": "application/pdf"});
